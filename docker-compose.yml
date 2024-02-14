@@ -114,7 +114,7 @@ services:
       - ./docker/keycloak/import:/opt/keycloak/data/import:ro
       - ./docker/keycloak/export:/tmp/export
       - ./docker/keycloak/themes/augustin:/opt/keycloak/themes/augustin:ro
-    
+
     command: start-dev --import-realm
     ports:
       - "8080:8080"
@@ -150,7 +150,6 @@ services:
   wordpress:
     image: wordpress:latest
     volumes:
-      - wp_data:/var/www/html
       - ./docker/wordpress/plugins/augustin-wp-papers:/var/www/html/wp-content/plugins/augustin-wp-papers
       - ./docker/wordpress/themes/augustin-wp-theme:/var/www/html/wp-content/themes/augustin-wp-theme
 
