@@ -42,6 +42,12 @@ services:
       VIVA_WALLET_API_URL: ${VIVA_WALLET_API_URL}
       VIVA_WALLET_ACCOUNTS_URL: ${VIVA_WALLET_ACCOUNTS_URL}
       BACKEND_HOST: ${BACKEND_HOST}
+      SMTP_SERVER: ${SMTP_SERVER}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USERNAME: ${SMTP_USERNAME}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      SMTP_SENDER_ADDRESS: ${SMTP_SENDER_ADDRESS}
+      
     depends_on:
       augustin-db:
         condition: service_healthy
